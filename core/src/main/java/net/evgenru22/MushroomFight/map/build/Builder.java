@@ -1,5 +1,6 @@
 package net.evgenru22.MushroomFight.map.build;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import net.evgenru22.MushroomFight.map.build.tile.EmptyCell;
@@ -18,7 +19,7 @@ public class Builder {
     private final int xOffset;
     private final int yOffset;
 
-    public static int energy = 75;
+    public static int energy = 1000;
     public static IMushroom selectedCard;
 
     public final static EnergyMushroom ENERGY_MUSHROOM = new EnergyMushroom();
@@ -49,14 +50,25 @@ public class Builder {
     }
 
     public void onClick(int x, int y) {
+        float screenWidth = Gdx.graphics.getWidth();
+        float screenHeight = Gdx.graphics.getHeight();
+
+        float gridWidth = screenWidth - xOffset;
+        float gridHeight = screenHeight - yOffset;
+
+        float cellWidth = gridWidth / 7;
+        float cellHeight = gridHeight / 5;
+
         float tableX = x - xOffset;
         float tableY = y - yOffset;
         System.out.println(tableX + ", " + tableY);
 
-        if (x > xOffset && y - yOffset <= height) {
-            int cellIndexX = (int)(tableX / 64);
-            int cellIndexY = (int)(tableY / 64);
+        if (tableX >= 0 && tableX <= gridWidth &&
+            tableY >= 0 && tableY <= gridHeight) {
+            int cellIndexX = (int)(tableX / cellWidth);
+            int cellIndexY = (int)(tableY / cellHeight);
             System.out.println(cellIndexX + ", " + cellIndexY);
+
             if (map[cellIndexX][cellIndexY] instanceof EmptyCell) {
                 if (energy >= selectedCard.getCost()) {
                     if (selectedCard instanceof EnergyMushroom) {

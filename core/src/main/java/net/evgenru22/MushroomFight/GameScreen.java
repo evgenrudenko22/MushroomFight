@@ -2,7 +2,11 @@ package net.evgenru22.MushroomFight;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.math.Vector3;
 import net.evgenru22.MushroomFight.map.Map;
 import net.evgenru22.MushroomFight.map.build.BuildListener;
 import net.evgenru22.MushroomFight.projectile.ProjectileSystem;
@@ -24,6 +28,7 @@ public class GameScreen implements Screen {
 
     @Override
     public void render(float delta) {
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         batch.begin();
         map.render(batch);
         ProjectileSystem.update(delta);
@@ -34,7 +39,6 @@ public class GameScreen implements Screen {
 
     @Override
     public void resize(int width, int height) {
-        map.resize(width, height);
     }
 
     @Override

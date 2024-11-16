@@ -43,10 +43,19 @@ android {
     targetCompatibility "8"
     coreLibraryDesugaringEnabled true
   }
+  signingConfigs {
+    release {
+      storeFile file("release-key.keystore")
+      storePassword "g2g1c9o"
+      keyAlias "mushroom_fight"
+      keyPassword "g2g1c9o"
+    }
+  }
   buildTypes {
     release {
+      signingConfig signingConfigs.release
       minifyEnabled true
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
     }
   }
 }
