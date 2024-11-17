@@ -7,8 +7,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import net.evgenru22.MushroomFight.map.build.Builder;
 
-import java.nio.file.attribute.UserPrincipal;
-
 public class Map {
     private final Texture map_t;
     private final TextureRegion map_r;

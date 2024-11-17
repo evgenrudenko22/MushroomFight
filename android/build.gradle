@@ -58,6 +58,9 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
     }
   }
+  dependencies {
+    implementation 'com.google.android.gms:play-services-ads:22.6.0'
+  }
 }
 
 repositories {
