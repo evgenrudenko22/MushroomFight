@@ -1,7 +1,7 @@
 # MushroomFight
 ![Mushrooms vs Balloons](https://img.itch.zone/aW1nLzE4NDU1MzA2LnBuZw==/original/HXhfGK.png)
 
-![Discord](https://img.shields.io/discord/1305415490851835924?logo=discord&logoColor=white&label=Discord&labelColor=%235865F2)
+[![Discord](https://img.shields.io/discord/1305415490851835924?logo=discord&logoColor=white&label=Discord&labelColor=%235865F2)](https://discord.gg/z5RRpPEnCT)
 
 The tower defence in PvZ style, written Java
 ## Building
@@ -17,4 +17,9 @@ _Sprite Packing:_ `gradlew tools:pack`
 _Running:_ `./gradlew desktop:run`
 _Building:_ `./gradlew desktop:dist`
 _Sprite Packing:_ `./gradlew tools:pack`
+
+## Downloads
+
+| [![](https://static.itch.io/images/badge.svg)](https://evgenru22.itch.io/MushroomFight)     |
+|---------------------------------------------------------------------------------------------|
 
