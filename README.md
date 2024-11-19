@@ -20,6 +20,6 @@ _Sprite Packing:_ `./gradlew tools:pack`
 
 ## Downloads
 
-| [![](https://static.itch.io/images/badge.svg)](https://evgenru22.itch.io/MushroomFight)     |
+| [![](https://static.itch.io/images/badge.svg)](https://evgenru22.itch.io/mushroom-fight)     |
 |---------------------------------------------------------------------------------------------|
 
